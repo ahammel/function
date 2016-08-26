@@ -8,8 +8,8 @@ import static junit.framework.TestCase.assertEquals;
 public class MonoidListTest {
     @Test
     public void concatDeeplyNestedLists() {
-        MonoidList<List<List<List<String>>>> f = new MonoidList<>();
-        List<List<List<List<String>>>> ls =
+        final MonoidList<List<List<List<String>>>> f = new MonoidList<>();
+        final List<List<List<List<String>>>> ls =
                 f.concatAll(List.of(List.of(List.of(List.of(List.of("foo"))))));
         assertEquals(ls, List.of(List.of(List.of(List.of("foo")))));
     }

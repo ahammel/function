@@ -31,7 +31,7 @@ public interface Monoid<T> extends Semigroup<T> {
      * concatAll(List.empty()) == empty()
      * ```
      */
-    default T concatAll(Iterable<T> xs) {
+    default T concatAll(final Iterable<T> xs) {
         return sconcatAll(empty(), xs);
     }
 
@@ -39,7 +39,7 @@ public interface Monoid<T> extends Semigroup<T> {
      * Variadic version of `concatAll`
      */
     @SuppressWarnings("unchecked")
-    default T concat(T... args) {
+    default T concat(final T... args) {
         return sconcatAll(empty(), Arrays.asList(args));
     }
 }

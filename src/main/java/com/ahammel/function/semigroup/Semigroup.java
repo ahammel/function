@@ -28,16 +28,16 @@ public interface Semigroup<T> {
      * Overrides can be provided for short-circuit evaluation when possible
      * (c.f., `SemigroupTry`).
      */
-    default T sconcatAll(T first, Iterable<T> rest) {
+    default T sconcatAll(final T first, final Iterable<T> rest) {
         T acc = first;
-        for (T y: rest) {
+        for (final T y: rest) {
             acc = append(acc, y);
         }
         return acc;
     }
 
     @SuppressWarnings("unchecked")
-    default T sconcat(T first, T... rest) {
+    default T sconcat(final T first, final T... rest) {
         return sconcatAll(first, Arrays.asList(rest));
     }
 }

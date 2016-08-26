@@ -5,7 +5,7 @@ import java.util.Optional;
 @SuppressWarnings("WeakerAccess")
 public final class MonoidFirst<T> implements Monoid<Optional<T>> {
     @Override
-    public Optional<T> append(Optional<T> x, Optional<T> y) {
+    public Optional<T> append(final Optional<T> x, final Optional<T> y) {
         return x.isPresent() ? x : y;
     }
 
@@ -15,10 +15,10 @@ public final class MonoidFirst<T> implements Monoid<Optional<T>> {
     }
 
     @Override
-    public Optional<T> sconcatAll(Optional<T> first,
-                                  Iterable<Optional<T>> rest) {
+    public Optional<T> sconcatAll(final Optional<T> first,
+                                  final Iterable<Optional<T>> rest) {
         if (first.isPresent()) { return first; }
-        for (Optional<T> x : rest) {
+        for (final Optional<T> x : rest) {
             if (x.isPresent()) { return x; }
         }
         return empty();

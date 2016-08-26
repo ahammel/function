@@ -11,7 +11,7 @@ public final class MonoidOptional<T> implements Monoid<Optional<T>> {
     private final Semigroup<T> semigroup;
 
     @Override
-    public Optional<T> append(Optional<T> x, Optional<T> y) {
+    public Optional<T> append(final Optional<T> x, final Optional<T> y) {
         return !x.isPresent() ? y :
                !y.isPresent() ? x :
                Optional.of(semigroup.append(x.get(), y.get()));

@@ -11,9 +11,9 @@ import static junit.framework.TestCase.assertEquals;
 public class MonoidOptionalTest {
     @Test
     public void concatOptionalString() {
-        MonoidOptional<String> f = new MonoidOptional<>(new MonoidString());
+        final MonoidOptional<String> f = new MonoidOptional<>(new MonoidString());
 
-        @SuppressWarnings("unchecked")
+        @SuppressWarnings("unchecked") final
         Optional<String> str = f.concat(
                 Optional.of("monkey"),
                 Optional.empty(),
@@ -28,10 +28,10 @@ public class MonoidOptionalTest {
 
     @Test
     public void concatOptionalListOfInteger() {
-        MonoidList<Integer> semigroup = new MonoidList<>();
-        MonoidOptional<List<Integer>> f = new MonoidOptional<>(semigroup);
+        final MonoidList<Integer>           semigroup = new MonoidList<>();
+        final MonoidOptional<List<Integer>> f         = new MonoidOptional<>(semigroup);
 
-        @SuppressWarnings("unchecked")
+        @SuppressWarnings("unchecked") final
         Optional<List<Integer>> ints = f.concat(
                 Optional.of(List.of(1, 2, 3)),
                 Optional.empty(),
@@ -42,10 +42,10 @@ public class MonoidOptionalTest {
 
     @Test
     public void concatOptionalMax() {
-        SemigroupMax<String> maxF = new SemigroupMax<>();
-        MonoidOptional<String> f = new MonoidOptional<>(maxF);
+        final SemigroupMax<String>   maxF = new SemigroupMax<>();
+        final MonoidOptional<String> f    = new MonoidOptional<>(maxF);
 
-        @SuppressWarnings("unchecked")
+        @SuppressWarnings("unchecked") final
         Optional<String> max = f.concat(
                 Optional.of("aardvark"),
                 Optional.of("zebra"),
@@ -57,8 +57,8 @@ public class MonoidOptionalTest {
 
     @Test
     public void monoidFirst() {
-        MonoidFirst<String> f = new MonoidFirst<>();
-        @SuppressWarnings("unchecked")
+        final MonoidFirst<String> f = new MonoidFirst<>();
+        @SuppressWarnings("unchecked") final
         Optional<String> first = f.concat(
                 Optional.empty(),
                 Optional.of("banana"),
@@ -69,9 +69,9 @@ public class MonoidOptionalTest {
 
     @Test
     public void monoidLast() {
-        MonoidLast<String> f = new MonoidLast<>();
+        final MonoidLast<String> f = new MonoidLast<>();
 
-        @SuppressWarnings("unchecked")
+        @SuppressWarnings("unchecked") final
         Optional<String> last = f.concat(
                 Optional.empty(),
                 Optional.of("banana"),

@@ -4,7 +4,8 @@ import java.util.function.Function;
 
 public final class MonoidFunction<A> implements Monoid<Function<A, A>> {
     @Override
-    public Function<A, A> append(Function<A, A> f, Function<A, A> g) {
+    public Function<A, A> append(final Function<A, A> f,
+                                 final Function<A, A> g) {
         return f.compose(g);
     }
 
