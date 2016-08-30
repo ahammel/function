@@ -1,4 +1,6 @@
-package com.ahammel.function.monoid;
+package com.ahammel.function.monoid.util;
+
+import com.ahammel.function.monoid.Monoid;
 
 import java.util.function.Function;
 

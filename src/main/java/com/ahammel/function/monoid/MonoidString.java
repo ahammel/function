@@ -3,8 +3,8 @@ package com.ahammel.function.monoid;
 @SuppressWarnings("WeakerAccess")
 public class MonoidString implements Monoid<String> {
     @Override
-    public String append(final String x, final String y) {
-        return x + y;
+    public String append(final String xs, final String ys) {
+        return xs + ys;
     }
 
     @Override

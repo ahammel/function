@@ -2,8 +2,8 @@ package com.ahammel.function.monoid;
 
 public final class MonoidAny implements Monoid<Boolean> {
     @Override
-    public Boolean append(final Boolean x, final Boolean y) {
-        return x || y;
+    public Boolean append(final Boolean xs, final Boolean ys) {
+        return xs || ys;
     }
 
     @Override

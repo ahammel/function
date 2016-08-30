@@ -1,5 +1,6 @@
 package com.ahammel.function.monoid;
 
+import com.ahammel.function.monoid.javaslang.MonoidList;
 import javaslang.collection.List;
 import org.junit.Test;
 

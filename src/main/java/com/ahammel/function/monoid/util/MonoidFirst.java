@@ -1,12 +1,14 @@
-package com.ahammel.function.monoid;
+package com.ahammel.function.monoid.util;
+
+import com.ahammel.function.monoid.Monoid;
 
 import java.util.Optional;
 
 @SuppressWarnings("WeakerAccess")
 public final class MonoidFirst<T> implements Monoid<Optional<T>> {
     @Override
-    public Optional<T> append(final Optional<T> x, final Optional<T> y) {
-        return x.isPresent() ? x : y;
+    public Optional<T> append(final Optional<T> xs, final Optional<T> ys) {
+        return xs.isPresent() ? xs : ys;
     }
 
     @Override

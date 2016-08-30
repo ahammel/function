@@ -1,11 +1,12 @@
-package com.ahammel.function.semigroup;
+package com.ahammel.function.semigroup.javaslang;
 
+import com.ahammel.function.semigroup.Semigroup;
 import javaslang.control.Either;
 
 public final class SemigroupEither<L, R> implements Semigroup<Either<L, R>> {
     @Override
-    public Either<L, R> append(final Either<L, R> x, final Either<L, R> y) {
-        return x.isRight() ? x: y;
+    public Either<L, R> append(final Either<L, R> xs, final Either<L, R> ys) {
+        return xs.isRight() ? xs : ys;
     }
 
     @Override

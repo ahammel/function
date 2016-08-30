@@ -1,5 +1,9 @@
 package com.ahammel.function.monoid;
 
+import com.ahammel.function.monoid.javaslang.MonoidList;
+import com.ahammel.function.monoid.util.MonoidFirst;
+import com.ahammel.function.monoid.util.MonoidLast;
+import com.ahammel.function.monoid.util.MonoidOptional;
 import com.ahammel.function.semigroup.SemigroupMax;
 import javaslang.collection.List;
 import org.junit.Test;

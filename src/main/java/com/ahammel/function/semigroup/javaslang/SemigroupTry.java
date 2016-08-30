@@ -1,11 +1,12 @@
-package com.ahammel.function.semigroup;
+package com.ahammel.function.semigroup.javaslang;
 
+import com.ahammel.function.semigroup.Semigroup;
 import javaslang.control.Try;
 
 public final class SemigroupTry<T> implements Semigroup<Try<T>> {
     @Override
-    public Try<T> append(final Try<T> x, final Try<T> y) {
-        return x.isSuccess() ? x : y;
+    public Try<T> append(final Try<T> xs, final Try<T> ys) {
+        return xs.isSuccess() ? xs : ys;
     }
 
     @Override

@@ -1,5 +1,6 @@
-package com.ahammel.function.monoid;
+package com.ahammel.function.monoid.javaslang;
 
+import com.ahammel.function.monoid.Monoid;
 import javaslang.collection.List;
 
 @SuppressWarnings("WeakerAccess")
